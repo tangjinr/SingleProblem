@@ -37,7 +37,7 @@ public class NumsAppearOnce {
 	}
 
 	// 求二进制数，第一个不为0的位置indexBit
-	private int FindFirstBitIs1(int num) {
+	private static int FindFirstBitIs1(int num) {
 		int indexBit = 0;
 		while (((num & 1) == 0) && (indexBit < 32)) {
 			num = num >> 1; // 移动操作
@@ -47,7 +47,7 @@ public class NumsAppearOnce {
 	}
 
 	// 分组
-	private boolean IsBit1(int num, int k) {
+	private static boolean IsBit1(int num, int k) {
 		num = num >> k;
 		return ((num & 1) == 1);// k位置不为0返回true，否则返回false
 	}
